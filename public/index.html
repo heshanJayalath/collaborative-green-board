@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHJ Green Board</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: black;
+    }
+
+    #canvas-container {
+        position: relative;
+    }
+
+    #canvas {
+        border: 1px solid white;
+        /* Optional: Add a border to the canvas */
+    }
+
+    #colorPicker {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    #clearButton,
+    #redoButton {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        /* Center horizontally */
+        transform: translateX(-50%);
+        /* Center horizontally */
+        margin: 5px;
+        padding: 8px;
+        background-color: #117150;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    #redoButton {
+        left: auto;
+        /* Align the "Redo" button to the right */
+        right: 10px;
+        transform: none;
+    }
+</style>
+
+<body>
+    <div id="canvas-container">
+        <input type="color" id="colorPicker" value="#ffffff" />
+        <button id="clearButton">Clear</button>
+        <button id="redoButton">Redo</button>
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js" integrity="sha512-zoJXRvW2gC8Z0Xo3lBbao5+AS3g6YWr5ztKqaicua11xHo+AvE1b0lT9ODgrHTmNUxeCw0Ry4BGRYZfXu70weg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
